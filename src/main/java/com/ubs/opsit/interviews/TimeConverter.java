@@ -12,7 +12,7 @@ public class TimeConverter {
 	
 	public String convertTime(String inputTime) {
 		StringBuilder convertTime = new StringBuilder();
-		logger.info("START TimeConverterImpl.convertTime :- " + inputTime);
+		logger.info("START TimeConverter.convertTime :- " + inputTime);
 		if (!TimeConverterUtility.validateInputTime(inputTime)) {
 			return CommonConstants.INVALID_TIME;
 		}
@@ -27,7 +27,7 @@ public class TimeConverter {
 					.append(CommonConstants.LINE_SEPARATOR);
 			convertTime.append(getMinutesModulusOfFive(Integer.parseInt(splitTime[1])));
 		}
-		logger.info("END TimeConverterImpl.convertTime :- " + convertTime.toString());
+		logger.info("END TimeConverter.convertTime :- " + convertTime.toString());
 		return convertTime.toString();
 	}
 
